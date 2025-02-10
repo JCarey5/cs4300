@@ -1,0 +1,51 @@
+Task 1: 
+The first task was a very simple program that printed out Hello, World!, based on the documentation about pytest that was 
+provided I decided to put this within a function so that I could call this function using pytest and look at the output to the console
+using capsys. Running the pytest shows that the function is printing out the expected string to the console.
+
+Task 2: 
+For this task I again created very simple functions that did operations with each of the required data types and created
+variables to hold the outputs from hese operations. For example I added some ints and floats, created a function to output a
+string after being provided with a name, and finally created a function to check if a numeric value is positve and returns a 
+boolean based upon the result. The pytest test cases I created for each of these essentially just compares the output of the 
+functions to the expected values that I put into the pytest calls.
+
+Task 3:
+Again for this task I created three functions, one with the if statement one with a for loop and the final using a while loop. 
+The implementations of the functions are incredibly simple with the first checking whether the numeric value provided is greater 
+than, less than or otherwise equal to zero and outputting a string based on the result of the if statement. The 10 prime numbers
+was the hardest of these structures as I had to look into how you check whether a value is a prime number, this code does this 
+by checking first if the value is less than 2, then it checks all values from 2 to the sqrt of the number being checked plus 1, 
+to see if it is a divisor of the value being checked. If no divisors are found after this for loop, then true is returned meaning
+the number is prime There is then a for loop that goes from 0 to 9, that contains a while loop that checks each value usng 
+is_prime until it has found the first 10 prime numbers. The function to find the sum of all ints from 1 to 100 is simply a 
+while loop that iterates a value starting at 1 and adding to a total sum until 100 is added, then returns the value found. The 
+pytest test cases for this task simply check the returned vlaue after calling the function or compare the string that was 
+output after the prime number and sum functions, as there was no input involved.
+
+Task 4:
+In task 4 I first use isinstance to check that discount and price are some numeric values and also checks that discount is a 
+valid value between 0 and 100. If either of these are false the function returns with a value of -1. The code then calculates 
+the discounted price by subtracting the price * (discount / 100) from the original price. This returns the price after the 
+discount has been applied. For the pytest cases of this task I did tests for when ints were used, floats were used , having 0 
+and 100 as the discount amounts and a series of invalid inputs like having invalid price or discount. 
+
+Task 5:
+For the list of books, I defined a list that contained a few tuples with my favorite books and their authors within it. I then 
+used list slicing, specifically favorite_books[:3] to put the first three tuples of the list into a separate variable that is 
+used to print out those tuples. The student database is just a dictionary storing the student names and id numbers which can 
+easily be printed out. The tests for this task do some things such as looking for specific items within the list or dictionary, 
+or checking the values based on a specific position to ensure the data structure is working as intended.
+
+Task 6:
+For this task I opened the file using with open() to read the file into a variable called content. I then used content.split() 
+to seperate the content of the file into a list based on the white spaces in the file. I then used the len() function to easily 
+count the amount of words that had been contained in the file. For my tests I dynamically generated the functions based on a list 
+of the file names being tested. The code paramaterizes the tests and loops to create unique test names based on these different 
+files the code then tests the output of the function against the expected word counts ensuring the the function is operating 
+correctly.
+
+Task 7: 
+For task 7 I installed numpy using pip install numpy. I then did two simple functions to find the mean of a list of numbers and
+the standard deviation. In my tests I then calculate these values without the use of the numpy functions to assure that the values
+found are correct.
